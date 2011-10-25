@@ -11,6 +11,13 @@ public class Interface {
 	String name;
 	String protocol;
 	String semantic;//this can be a schema
+	Message message;
+	public Message getMessage() {
+		return message;
+	}
+	public void setMessage(Message message) {
+		this.message = message;
+	}
 	public String getSemantic() {
 		return semantic;
 	}

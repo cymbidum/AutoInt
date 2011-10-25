@@ -22,6 +22,12 @@ public class Filter {
 	public void setNext(Filter next) {
 		this.next = next;
 	}
+	public Filter() {
+		super();
+		this.previous = null;
+		this.next = null;
+	}
+	
 	
 	
 }
