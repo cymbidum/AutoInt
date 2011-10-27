@@ -16,6 +16,7 @@ public class SemanticWSInterface extends WSInterface {
 		for(Output o:semantic.process.getOutputs()){
 			this.outputs.add(new Parameter(o.getName(),o.getParamType().toString()));
 		}
+		this.wsdl_uri = semantic.getWSDL();
 	}
 	@Override
 	public String toString() {
@@ -34,6 +35,8 @@ public class SemanticWSInterface extends WSInterface {
 		builder.append(inputs);
 		builder.append(", outputs=");
 		builder.append(outputs);
+		builder.append(", wsdl=");
+		builder.append(wsdl_uri);
 		builder.append("]");
 		return builder.toString();
 	}

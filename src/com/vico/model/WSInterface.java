@@ -1,12 +1,12 @@
 package com.vico.model;
 
 public class WSInterface extends Interface {
-	String uri_wsdl;
+	String wsdl_uri;
 	public String getUri_wsdl() {
-		return uri_wsdl;
+		return wsdl_uri;
 	}
 	public void setUri_wsdl(String uri_wsdl) {
-		this.uri_wsdl = uri_wsdl;
+		this.wsdl_uri = uri_wsdl;
 	}
 	public WSInterface() {
 		super();
@@ -14,6 +14,6 @@ public class WSInterface extends Interface {
 	}
 	public WSInterface(String uri){
 		this();
-		this.uri_wsdl = uri;
+		this.wsdl_uri = uri;
 	}
 }
