@@ -57,5 +57,12 @@ public class ServiceSemantic {
 		}
 		return "";
 	}
+	public String getServiceName(){
+		return profile.getServiceName();
+	}
+	public String getAtomicProcessName(){
+		return process.getURI().toString();
+	}
+
 	
 }

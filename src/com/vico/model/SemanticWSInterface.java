@@ -6,6 +6,18 @@ import org.mindswap.owls.process.variable.Output;
 public class SemanticWSInterface extends WSInterface {
 	String owl_uri;
 	ServiceSemantic semantic;
+	public String getOwl_uri() {
+		return owl_uri;
+	}
+	public void setOwl_uri(String owl_uri) {
+		this.owl_uri = owl_uri;
+	}
+	public ServiceSemantic getServiceSemantic() {
+		return semantic;
+	}
+	public void setServiceSemantic(ServiceSemantic semantic) {
+		this.semantic = semantic;
+	}
 	public SemanticWSInterface(String owl_uri) {
 		super();
 		this.owl_uri = owl_uri;

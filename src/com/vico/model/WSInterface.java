@@ -10,7 +10,7 @@ public class WSInterface extends Interface {
 	}
 	public WSInterface() {
 		super();
-		this.protocol = "HTTP";
+		this.protocol = Util.PROTOCOL_SOAP;
 	}
 	public WSInterface(String uri){
 		this();

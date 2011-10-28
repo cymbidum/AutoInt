@@ -20,6 +20,7 @@ public class InfoSystem {
 		for (Service element : services) {
 			ret = ret + element.toString();
 		}
+		ret = ret+"\r\n";
 //		for (Interface element : interfaces) {
 //			ret = ret + element.toString();
 //		}
@@ -41,6 +42,15 @@ public class InfoSystem {
 			}
 		}
 		return null;
+	}
+	
+	public static InfoSystem loadSemanticInfoSystem(String owl_uri){
+		SemanticWSInterface swsi = SemanticWSInterface.loadSemanticWS(owl_uri);
+		InfoSystem sys = new InfoSystem(swsi.getServiceSemantic().getServiceName());
+		com.vico.model.Service serv = new com.vico.model.Service(swsi.getServiceSemantic().getAtomicProcessName());
+		serv.addInterface(swsi);
+		sys.addService(serv);
+		return sys;
 	}
 	
 }

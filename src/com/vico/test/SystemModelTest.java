@@ -82,11 +82,13 @@ public class SystemModelTest {
 		//add RIS
 		model.addSystem(sysRIS);
 		//load system semantic
-		InfoSystem sysBookFinder = new InfoSystem("BookFinder");
-		Service serFindService = new Service("Find Book");
-		serFindService.addInterface(Interface.loadSemanticWS("N:/InterfaceEngine/semantic/BookFinder.owl"));
-		sysBookFinder.addService(serFindService);
+//		InfoSystem sysBookFinder = new InfoSystem("BookFinder");
+//		Service serFindService = new Service("Find Book");
+//		serFindService.addInterface(Interface.loadSemanticWS("N:/InterfaceEngine/semantic/AmazonBookPrice.owl"));
+//		sysBookFinder.addService(serFindService);
+		InfoSystem sysBookFinder = InfoSystem.loadSemanticInfoSystem("N:/InterfaceEngine/semantic/AmazonBookPrice.owl");
 		model.addSystem(sysBookFinder);
+		
 		
 		return model;
 	}

@@ -44,7 +44,7 @@ public class Interface {
 		this.outputs = outputs;
 	}
 	
-	public static Interface loadSemanticWS(String owl_uri){
+	public static SemanticWSInterface loadSemanticWS(String owl_uri){
 		SemanticWSInterface ice = new SemanticWSInterface(owl_uri);
 		return ice;
 	}
